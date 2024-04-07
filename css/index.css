@@ -1,0 +1,242 @@
+
+
+.motherDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+.guess, .choose {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.guess {
+    width: 200px;
+    border: 1px solid;
+}
+.choose {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.screen{ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 80vh;
+    text-align: center;
+    background-image: url(../svg/9.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    visibility: hidden;
+}
+
+.screenWin{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 80vh;
+    width: 80vh;
+    background-image: url(../svg/10.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    visibility: hidden;
+
+}
+.inp{
+    display: flex;
+    justify-content: center;
+}
+.svg{
+    width: 40vh;
+    margin-top: 70px;
+}
+.alphabet{
+    margin-top: 100px;
+}
+
+.alphabet1{
+    margin-bottom: 20px;
+}
+.alphabet2{
+    margin-bottom: 20px;
+}
+.harf-buton{    
+    width: 50px;
+    height: 30px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #0B63F6;
+    box-shadow: 0 5px 0 #003CC5;
+}
+
+.harf-buton:hover{
+    background: #003CC5;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+.h{
+    font-family: Arial, sans-serif; 
+  font-size: 24px; 
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.name{
+    text-align: center;
+    padding: 10px;
+}
+
+.xp{
+    width: 6vh;
+}
+.heart{
+    position: relative;
+    display: inline-block;
+    margin-left: 450px;
+}
+.hp{
+    position: absolute;
+    top: -3px; 
+    right: 10px; 
+    padding: 5px 10px; 
+    font-size: 14px;
+    color: white;
+    z-index: 1;
+}
+
+/* Дизайн кнопки */
+
+.refres{
+    margin-top: 110px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.refres:hover{
+     box-shadow: .5px .5px 150px #252525;
+}
+.refres::after{
+    content: "Restart";
+    height: 50px;
+    width: 150px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+.refres::before{
+    content: "You Die";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.refres:hover::after{
+    transform: translateY(0) scale(1.2);
+}
+.refres:hover::before{
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+/* ------------ */
+
+.refres-win{
+    margin-top: 110px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.refres-win:hover{
+     box-shadow: .5px .5px 150px #252525;
+}
+.refres-win::after{
+    content: "Restart";
+    height: 50px;
+    width: 150px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+.refres-win::before{
+    content: "You Win";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.refres-win:hover::after{
+    transform: translateY(0) scale(1.2);
+}
+.refres-win:hover::before{
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+/* Конец дизайна */
